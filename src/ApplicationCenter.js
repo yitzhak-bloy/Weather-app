@@ -7,7 +7,7 @@ class ApplicationCenter extends React.Component {
         <div className="ApplicationCenter" >
           <h1>רשום עיר או מדינה</h1>
           <input type="text"></input>
-          <div>
+          <div className="buttonCenter">
             <input type="button" className="button1" value="קבל את התחזית"></input>
           </div>
         </div>
