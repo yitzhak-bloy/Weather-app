@@ -1,7 +1,4 @@
-.ApplicationCenter {
-	height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.allApp {
+    display: grid;
+    grid-template-rows: 0.3fr 13fr;
 }
