@@ -1,0 +1,11 @@
+.ApplicationCenter {
+	height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button1 {
+    margin-top: 10px;
+}
