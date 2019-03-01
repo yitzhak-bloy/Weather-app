@@ -6,8 +6,11 @@
 
 .inputHeader {
     display: flex; 
-    justify-content: space-around;
     align-items: center;
+}
+
+input {
+    margin-left: 1%
 }
 
 .textHeader {
