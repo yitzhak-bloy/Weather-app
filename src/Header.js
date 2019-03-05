@@ -7,9 +7,9 @@ class Header extends React.Component {
         <div className="Header" >
             <div className="inputHeader">
                 <div>
-                    <input type="button" className="button1" value="קבל את התחזית"></input>
+                    <input type="button" className="button1" value="קבל את התחזית"/>
                 </div>
-                <input type="text"></input>
+                <input type='search' placeholder='שם עיר'/>
             </div>
             <h1 className="textHeader">התחזית</h1>
         </div>
