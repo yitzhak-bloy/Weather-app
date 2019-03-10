@@ -6,17 +6,22 @@ class ApplicationCenter extends React.Component {
     super();
     this.state = {
       input: '',
+      city: '',
     }
   }
 
-  onInputChange = () => {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA&type=accurate&APPID=de6b1890ad2f21aebdbfb8e1bd667add')
-    .then(response=> response.json())
-    .then(zxc => console.log(zxc));
+  onInputChange = (event) => {
+    this.setState({input: event.target.value})
+    // fetch('https://api.openweathermap.org/data/2.5/weather?q=%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA&type=accurate&APPID=de6b1890ad2f21aebdbfb8e1bd667add')
+    // .then(response=> response.json())
+    // .then(zxc => console.log(zxc));
+    console.log(this.state.input);
   }
 
   onButtonSubmit = () => {
+    this.setState({city: this.state.input})
     console.log("click");
+    console.log(this.state.city);
   }
 
   render() {
