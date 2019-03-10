@@ -1,5 +1,5 @@
 .Header {
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.25);;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
