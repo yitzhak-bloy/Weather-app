@@ -10,26 +10,31 @@ class ApplicationCenter extends React.Component {
     }
   }
 
+  componentDidMount() {
+
+  }
+
   onInputChange = (event) => {
     this.setState({input: event.target.value})
-    // fetch('https://api.openweathermap.org/data/2.5/weather?q=%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA&type=accurate&APPID=de6b1890ad2f21aebdbfb8e1bd667add')
-    // .then(response=> response.json())
-    // .then(zxc => console.log(zxc));
-    console.log(this.state.input);
+    this.setState({city: this.state.input})
   }
 
   onButtonSubmit = () => {
-    this.setState({city: this.state.input})
     console.log(this.state.city);
-  }
-
-  componentDidMount() {
-    if (this.state.city === 'רחובות') {
+   if (this.state.city !== '') {
       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&type=accurate&APPID=de6b1890ad2f21aebdbfb8e1bd667add`)
       .then(response=> response.json())
       .then(zxc => console.log(zxc));
     }
   }
+
+  // componentDidMount() {
+  //   if (this.state.city === 'רחובות') {
+  //     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&type=accurate&APPID=de6b1890ad2f21aebdbfb8e1bd667add`)
+  //     .then(response=> response.json())
+  //     .then(zxc => console.log(zxc));
+  //   }
+  // }
 
   render() {
     return (
