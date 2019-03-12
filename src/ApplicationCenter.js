@@ -20,8 +20,15 @@ class ApplicationCenter extends React.Component {
 
   onButtonSubmit = () => {
     this.setState({city: this.state.input})
-    console.log("click");
     console.log(this.state.city);
+  }
+
+  componentDidMount() {
+    if (this.state.city === 'רחובות') {
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&type=accurate&APPID=de6b1890ad2f21aebdbfb8e1bd667add`)
+      .then(response=> response.json())
+      .then(zxc => console.log(zxc));
+    }
   }
 
   render() {
