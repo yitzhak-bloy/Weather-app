@@ -11,7 +11,9 @@
 }
 
 input {
+    padding:3px;
     margin-left: 1%
+    
 }
 
 .textHeader {
