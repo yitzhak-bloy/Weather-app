@@ -1,5 +1,5 @@
 .Header {
-    background-color: rgba(0, 0, 255, 0.25);;
+    background-color: rgba(0, 0, 255, 0.3);
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -7,6 +7,7 @@
 .inputHeader {
     display: flex; 
     align-items: center;
+    margin-left: 1%
 }
 
 input {
@@ -19,4 +20,5 @@ input {
     justify-content: flex-end;
     align-items: center ;
     color: white;
+    margin-right: 1%;
 }
