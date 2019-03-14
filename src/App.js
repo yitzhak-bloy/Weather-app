@@ -35,7 +35,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="allApp" >
-        <Header />
+        <Header onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
         <ApplicationCenter onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
       </div>
     );
