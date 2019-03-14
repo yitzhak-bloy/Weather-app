@@ -8,7 +8,6 @@ class App extends React.Component {
     super();
     this.state = {
       input: '',
-      city: '',
     }
     this.onInputChange = this.onInputChange.bind(this);
     this.onButtonSubmit = this.onButtonSubmit.bind(this);
@@ -18,15 +17,10 @@ class App extends React.Component {
     this.setState({input: event.target.value})
   }
 
-  // componentDidMount() {
-  //   this.setState({city: this.state.input})
-  // }
-
   onButtonSubmit = () => {
-    this.setState({city: this.state.input})
-    console.log(this.state.city);
-   if (this.state.city !== '') {
-      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&type=accurate&APPID=de6b1890ad2f21aebdbfb8e1bd667add`)
+    console.log(this.state.input);
+    if (this.state.input !== '') {
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.input}&type=accurate&APPID=de6b1890ad2f21aebdbfb8e1bd667add`)
       .then(response=> response.json())
       .then(zxc => console.log(zxc));
     }
